@@ -2,11 +2,12 @@
 # @author Ashish Jha
 
 #vManage Specific alias
-alias ogc='open -a Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
+alias ogc='open -a Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security  --disable-features=SameSiteByDefaultCookies,CookiesWithoutSameSiteMustBeSecure'
 alias dogc='open -a Google\ Chrome --args --enable-web-security --user-data-dir="/tmp/chrome_dev_test"'
 alias rkt='./node_modules/.bin/karma start test/karma.conf.js'
 alias nms="cd /Users/asjha2/viptela/source/nms"
 alias mnms="cd /Users/asjha2/nms"
+alias ngs="ng serve --live-reload false --source-map=false"
 mvc='/Users/asjha2/nms/src/main/client/'
 vc='/Users/asjha2/viptela/source/nms/src/main/client/'
 
@@ -42,6 +43,7 @@ fi
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 alias ls="command ls ${colorflag}"
+alias g++="g++ -w"
 
 #Path Option
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -78,3 +80,9 @@ export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1;
+
+#### FIG ENV VARIABLES ####
+[[ -s ~/.fig/fig.sh ]] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+
